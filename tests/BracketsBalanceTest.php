@@ -30,6 +30,30 @@ class BracketsBalanceTest extends TestCase
         );
     }
 
+    /**
+     * @dataProvider dataProviderForBalancePlusTrue
+     */
+    public function testDoBracketsBalancePlusTrue($item)
+    {
+        $bracketsBalance = new BracketsBalance();
+
+        $this->assertTrue(
+            $bracketsBalance->doBracketsBalance($item)
+        );
+    }
+
+    /**
+     * @dataProvider dataProviderForBalancePlusFalse
+     */
+    public function testDoBracketsBalancePlusFalse($item)
+    {
+        $bracketsBalance = new BracketsBalance();
+
+        $this->assertFalse(
+            $bracketsBalance->doBracketsBalancePlus($item)
+        );
+    }
+
     public function dataProviderForBalanceTrue()
     {
         return [
@@ -43,6 +67,22 @@ class BracketsBalanceTest extends TestCase
         return [
             ['(]))'],
             ['([)(]']
+        ];
+    }
+
+    public function dataProviderForBalancePlusTrue()
+    {
+        return [
+            ['()'],
+            ['[([])]']
+        ];
+    }
+
+    public function dataProviderForBalancePlusFalse()
+    {
+        return [
+            ['([(]))'],
+            ['([)(])']
         ];
     }
 }
