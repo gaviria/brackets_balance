@@ -3,7 +3,7 @@
 	"description": "balanceo de paréntesis",
 	"autoload": {
 		"psr-4": {
-			"Fgaviria\\Balanceo\\": "src/"
+			"Fgaviria\\": "src/"
 		}
 	},
 	"authors": [
