@@ -112,4 +112,4 @@ class BracketsBalance
 
 $bracketsBalance = new BracketsBalance();
 echo "doBracketsBalance => " . ($bracketsBalance->doBracketsBalance("()[(])") ? "True" : "False"); //true
-echo "doBracketsBalance => " . ($bracketsBalance->doBracketsBalancePlus("()[(])") ? "True" : "False"); //false
+//echo "doBracketsBalance => " . ($bracketsBalance->doBracketsBalancePlus("()[(])") ? "True" : "False"); //false
